@@ -1,17 +1,30 @@
-import icon from '../../assets/img/notifiction-icon.svg'
+import DataPicker from "react-datepicker"
+import "react-datepicker/dist/react-datepicker.css";
+
 import NotificationButtom from '../NotificationButtom'
 import '../SalesCard/style.css'
 function SalesCard() {
     return( 
-
       <div className="dsmeta-card">
       <h2 className="dsmeta-sales-title">Vendas</h2>
       <div>
         <div className="dsmeta-form-control-container">
-          <input className="dsmeta-form-control" type="text"/>
+          {/* <input className="dsmeta-form-control" type="text"/> */}
+            <DataPicker
+              selected={new Date()}
+              onChange={(date: Date) => {}}
+              className="dsmeta-form-control"
+              dateFormat="dd/MM/yyyy"
+              />
         </div>
         <div className="dsmeta-form-control-container">
-          <input className="dsmeta-form-control" type="text"/>
+          {/* <input className="dsmeta-form-control" type="text"/> */}
+            <DataPicker
+                selected={new Date()}
+                onChange={(date: Date) => {}}
+                className="dsmeta-form-control"
+                dateFormat="dd/MM/yyyy"
+            />
         </div>
       </div>
 
@@ -65,7 +78,7 @@ function SalesCard() {
               <td>
                 <div className="dsmeta-red-btn-container">
                   <div className="dsmeta-red-btn">
-                    <img src={icon} alt="Notificar" />
+                    <NotificationButtom/>
                   </div>
                 </div>
               </td>
