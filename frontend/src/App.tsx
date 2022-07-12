@@ -1,7 +1,13 @@
+import Header from "./components/Header"
+import NotificationButtom from "./components/NotificationButtom"
 function App() {
   return(
-    <h1> Olá Mundo!</h1>
-     )
+    <>
+    <Header/>
+    <NotificationButtom/>
+    
+   
+    </> )
   }
 
 export default App
